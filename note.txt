@@ -5,6 +5,10 @@ git add
 git reset
 git add .
 git add folder2/or_path/etccc
+git branch feature
+git diff
+git diff --staged # THIS IS COOL
+git diff head
 
 
 git config --global user.name "Solo17x"
