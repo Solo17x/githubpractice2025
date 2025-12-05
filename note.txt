@@ -9,6 +9,8 @@ git branch feature
 git diff
 git diff --staged # THIS IS COOL
 git diff head
+git log 
+git log --oneline # clean
 
 
 git config --global user.name "Solo17x"
