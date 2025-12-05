@@ -1,0 +1,18 @@
+git init 
+git status
+git branch -m main
+git add 
+git reset
+git add .
+git add folder2/or_path/etccc
+
+
+git config --global user.name "Solo17x"
+git config --global user.email "ralphjustinbacudio@gmail.com"
+git config --global --list 
+git config --global init.defaultBranch main
+git config --global --list 
+git config --global --unset user.name 
+git config --global --list
+git config --global user.name "new_name_if_you_want"
+
