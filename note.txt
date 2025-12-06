@@ -1,29 +1,77 @@
-git init 
-git status
-git branch -m main
-git add 
-git reset
-git add .
-git add folder2/or_path/etccc
-git branch feature
-git diff
-git diff --staged # THIS IS COOL
-git diff head
-git log 
-git log --oneline # clean
-git branch new_branch?
-git branch -d feature # DELETED branch
-git push # FINAL PROJECT
-git remote -v 
-git fetch
+# INITIALIZE & BASIC SET UP
 
+git init                 # Create new local repository
+git status               # Check status of working directory
+git branch -m main       # Rename current branch to main
+
+
+# STAGING CHANGES 
+
+git add .                # Add all changes
+git add path/to/file     # Add specific file
+git add folder2/...      # Add folder or deeper path
+git reset                # Unstage everything (keeps changes)
+git reset HEAD~1         # Undo last commit but keep changes
+
+# WORKING WITH BRANCHES
+
+git branch feature       # Create new branch (no switch)
+git checkout -b feature  # Create AND switch to feature branch
+git checkout main        # Switch to main
+git branch new_branch    # Branch must have a name
+git branch -d feature    # Delete branch
+
+
+# VIEWING CHANGES
+
+git diff                 # Changes not staged
+git diff --staged        # Changes staged (indexed)
+git diff HEAD            # Compare working dir with last commit
+
+
+# COMMIT HISTORY 
+git log                  # Full log
+git log --oneline        # Clean, short log
+
+
+# MERGING & CONFLICT 
+
+git merge feature        # Merge feature into current branch
+# If conflict happens:
+# >>> Fix files manually, then:
+git add .
+git commit
+
+
+# REMOTE REPOSITORY 
+
+git remote -v            # List remote URLs
+git push                 # Push current branch
+git pull                 # Fetch + merge latest
+git fetch                # Only download updates (no merge)
+
+
+# UNDOING THINGS 
+
+git commit --amend       # Edit last commit message or add new changes
+git reset --soft HEAD~2  # Undo last 2 commits, keep changes staged
+git reset --mixed HEAD~1 # Undo commit, unstage, KEEP changes
+git reset HEAD~1         # (Same as mixed)
+
+
+# HARD RESET (DANGEROUS)
+git reset --hard <commit_id>
+
+# SAFETY & RECOVERY 
+git reflog               # Shows ALL actions, even lost commits
+git cherry-pick <id>     # Copy one commit into current branch
+
+
+#GIT CONFIG 
 
 git config --global user.name "Solo17x"
 git config --global user.email "ralphjustinbacudio@gmail.com"
-git config --global --list 
 git config --global init.defaultBranch main
-git config --global --list 
-git config --global --unset user.name 
 git config --global --list
+git config --global --unset user.name
 git config --global user.name "new_name_if_you_want"
-
