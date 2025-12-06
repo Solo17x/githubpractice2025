@@ -11,6 +11,11 @@ git diff --staged # THIS IS COOL
 git diff head
 git log 
 git log --oneline # clean
+git branch new_branch?
+git branch -d feature # DELETED branch
+git push # FINAL PROJECT
+git remote -v 
+git fetch
 
 
 git config --global user.name "Solo17x"
